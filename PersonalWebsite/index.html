@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="aos.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Wesley Mui - Home</title>
 </head>
@@ -22,29 +22,27 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-links">Home</a></li>
                 <li><a href="about.html" class="nav-links">About </a></li>
+                <li><a href="portfolio.html" class="nav-links">Portfolio</a></li>
                 <li><a href="resume.html" class="nav-links">Resume</a></li>
+                <li><a href="events.html" class="nav-links">Events</a></li>
                 <li><a href="contact.html" class="nav-links">Contact</a></li>
             </ul>
         </nav>
     </div>
     <div class="home-page-container">
-        <img src="/Images/117864426_2654452321470341_5699155821384263395_o.jpg" 
-        alt="Wesley" class="home-page-img" ondragstart="return false">
         <h1 id="home-page-text">Hi, I'm Wesley.</h1>
-        <button id="button">Learn More</button>
+        <button id="button"><a href="about.html">Learn More</a></button>
     </div>
     <div class="section-container">
-        <section>
-            <img src="/Images/roosevelt-avenue-jackson-heights-little-india-micro-neighborhoods-nyc-untapped-cities-brennan-ortiz_0.jpg"
-            class="section-img" ondragstart="return false">
-            <h1 id="section-text-1" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">Born in Jackson Heights, Queens.</h1>
+        <section id="section-img-1" data-aos="fade-right">
+            <h1 id="section-text-1" data-aos="fade-up">Born in Jackson Heights, Queens.</h1>
         </section>
-        <img src="/Images/IMG_3455.JPG" class="section-img" 
-        ondragstart="return false">
-        <h1 id="section-text-2" data-aos="fade">Raised in the greatest city in the world.</h1>
-        <img src="/Images/campus-photo-2000px.jpg" class="section-img" ondragstart="return false">
-        <h1 id="section-text-3" data-aos="fade">Pursuing computer science at Stony Brook.</h1>
+        <section id="section-img-2" data-aos="fade-left">
+            <h1 id="section-text-2" data-aos="fade-up">Raised in the greatest city in the world.</h1>
+        </section>
+        <section id="section-img-3" data-aos="fade-right">
+            <h1 id="section-text-3" data-aos="fade-up">Pursuing computer science at Stony Brook.</h1>
+        </section>
     </div>
     <div class="footer-container">
         <footer class="footerbar">
@@ -69,14 +67,11 @@
             </form>
         </footer>
     </div>
-    <!--<script src="app.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="aos.js"></script>
-    <script type="text/javascript">
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
       AOS.init({
-          duration: 800,
-          easing: 'ease',
-          once: false
+          duration: 2000
       });
     </script>
 </body>

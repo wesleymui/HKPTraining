@@ -25,3 +25,14 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
   
   });
+
+  window.onscroll = function() 
+  {scrollFunction()};
+
+  function scrollFunction() {
+      if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("navbar").style.top = "0";
+      } else {
+          document.getElementById("navbar").style.top = "-50px";
+      }
+  }
