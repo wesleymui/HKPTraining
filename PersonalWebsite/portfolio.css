@@ -1,0 +1,26 @@
+:root {
+    --transparent-white: rgba(255, 255, 255, 0.5);
+    --transparent-black: rgba(0, 0, 0, 0.5);
+    --black: #000000;
+    --navy-blue: #1c2e4a;
+    --air-force: #588bae;
+    --steel: #468284;
+}
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+.portfolio-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 10vw auto auto 25vw;
+    grid-template-rows: 20vh auto 20vh;
+    grid-column-gap: 1vw;
+    background-image: url("/Images/893489-cool-shapes-wallpapers-3420x2138-samsung.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
