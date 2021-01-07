@@ -5,6 +5,7 @@
     --navy-blue: #1c2e4a;
     --air-force: #588bae;
     --steel: #468284;
+    --fern: #5DBB63;
 }
 }
 * {
@@ -14,13 +15,55 @@
 }
 
 .resume-container {
-    max-width: 100%;
+    width: 100vw;
     display: grid;
-    grid-template-columns: 10vw auto auto 25vw;
-    grid-template-rows: 20vh auto 20vh;
-    grid-column-gap: 1vw;
+    grid-template-columns: 10vw auto auto 10vw;
+    grid-template-rows: 15vh auto auto auto auto auto 15vh;
+    grid-row-gap: 2vh;
     background-image: url("/Images/846661.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 1000px;
+}
+.main-info {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--transparent-black);
+    border-radius: 1vw;
+}
+#name {
+    font-size: 3vw;
+    margin-top: 1vw;
+    text-align: left;
+}
+#profile-img {
+    display: inline;
+    border-radius: 10%;
+    max-width: 20%;
+    float: left;
+    transform: translate(2vw, 3vh);
+}
+#linked-in {
+    display: inline-block;
+    font-size: 1.25vw;
+    text-align: left;
+    /*transform: translate(-9.9vw, -21vh);*/
+}
+#email {
+    display: inline-block;
+    font-size: 1.25vw;
+    text-align: left;
+    /*transform: translate(-10.7vw, -22vh);*/
+}
+#phone-num {
+    display: inline-block;
+    font-size: 1.25vw;
+    text-align: left;
+    /*transform: translate(-15vw, -23.5vh);*/
+}
+.education {
+    grid-column: 2;
+    grid-row: 3/4;
+    background-color: var(--transparent-black);
+    border-radius: 1vw;
 }
