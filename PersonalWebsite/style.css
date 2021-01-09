@@ -51,8 +51,8 @@ a {
 .nav-menu {
     display: grid;
     grid-template-columns: repeat(6, auto);
-    column-gap: 75px;
     margin-right: 0;
+    column-gap: 5.5vw;
     list-style: none;
     text-align: center;
     justify-self: center;
@@ -65,7 +65,8 @@ a {
     font-size: 1.25vw;
 }
 .nav-links:hover {
-    color: var(--air-force);
+    background-color: var(--air-force);
+    color: white;
     transition: all 0.2s ease-out;
 }
 
@@ -75,7 +76,7 @@ a {
     bottom: 0;
     display: flex;
     justify-content: center;
-    height: 800px;
+    min-height: 100vh;
     position: sticky;
     max-width: 100%;
     z-index: -1;
@@ -131,10 +132,7 @@ a {
 }
 
 .home-page-container:nth-child(2) {
-    background-image: url(/Images/roosevelt-avenue-jackson-heights-little-india-micro-neighborhoods-nyc-untapped-cities-brennan-ortiz_0.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    max-width: 100%;
+    background: url(/Videos/7train.mp4) no-repeat center/cover;
     z-index: -2;
 }
 #myVideo {
@@ -156,8 +154,10 @@ a {
 .home-page-container:nth-child(3) {
     background-image: url(/Images/IMG_3455.JPG);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     width: 100vw;
+    min-height: 100vh;
     z-index: -3;
 }
 #section-text-2 {
@@ -176,8 +176,10 @@ a {
 .home-page-container:last-child {
     background-image: url(/Images/campus-photo-2000px.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     max-width: 100%;
+    min-height: 100vh;
     z-index: -4;
 }
 #section-text-3 {
@@ -212,6 +214,7 @@ a {
 .footer-icons {
     font-size: 3vw;
     color: white;
+    cursor: pointer;
 }
 #connect-form {
     grid-column: 3 / 5;
@@ -247,16 +250,132 @@ input[type=text] {
 }
 
 
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3 ease-in-out;
+    background: white;
+}
+
+
 @media only screen and (max-width: 1255px) {
-    .nav-menu {
-        column-gap: 70px;
-    }
     #button {
         bottom: 36vh;
     }
+}
+/*@media only screen and (max-width: 1200px) {
+
+}
+@media only screen and (max-width: 1100px) {
+
+}*/
+@media only screen and (max-width: 760px) {
+    .nav-container {
+        position: relative;
+    }
+
+    .nav-menu {
+        display: grid;
+        grid-template-columns: auto;
+        background: var(--transparent-black);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    #navbar-logo {
+        margin-left: 30px;
+    }
+    .nav-menu.active {
+        background: var(--transparent-black);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links {
+        text-align: center;
+        font-size: 20px;
+        line-height: 50px;
+        width: 100%;
+        display: table;
+    }
+    .nav-links:hover {
+        background-color: var(--navy-blue);
+        color: white;
+        transition: all 0.4s ease-out;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        right: 5%;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        cursor: pointer;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    #button {
+        position: absolute;
+        bottom: 36vh;
+        left: 31vw;
+        padding: 2vw 5vw;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color:var(--navy-blue);
+        border: none;
+        font-size: 15px;
+        width: 40%;
+    }
     #home-page-text {
-        top: 42vh;
-    }    
+        position: relative;
+        left: 2vw;
+        /*might have something to do with size of background*/
+        font-size: 9vh;
+    }
+    #section-text-1 {
+        font-size: 10vw;
+        top: 45vh;
+    }
+    #section-text-2 {
+        font-size: 10vw;
+        top: 50vh;
+    }
+    #section-text-3 {
+        font-size: 10vw;
+        top: 50vh;
+    }
+    .footer-icons {
+        font-size: 6vw;
+        padding: 0 8vw 0 8vw;
+        color: white;
+        cursor: pointer
+    }
+    .footerbar {
+        display: grid;
+        grid-template-columns: repeat(4, 25vw);
+        align-items: center;
+        height: 90px;
+    }
+    .footer-menu {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+    }
 }
 
 @media (min-aspect-ratio: 16/9) {
