@@ -32,7 +32,7 @@
     color: black;
 }
 #about-h3 {
-    top: 26vw;
+    top: 48vh;
     left: 42.3vw;
     font-size: 1.5vw;
     padding-right: 25vw;
@@ -44,8 +44,8 @@
     color: black;  
 }
 #about-head {
-    top: 20vw;
-    left: 24.4vw;
+    top: 37vh;
+    left: 24.3vw;
     font-size: 5vw;
     font-weight: 900;
     text-align: center;
@@ -56,14 +56,14 @@
 }
 #about-text {
     padding-right: 26.5vw;
-    top: 35vw;
+    top: 67vh;
     left: 42.3vw;
     font-size: 1.3vw;
     text-align: left;
 }
 #about-text-1 {
     padding-right: 26vw;
-    top: 46vw;
+    top: 87vh;
     left: 42.3vw;
     font-size: 1.3vw;
     text-align: left;
