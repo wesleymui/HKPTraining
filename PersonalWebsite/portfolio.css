@@ -6,21 +6,119 @@
     --air-force: #588bae;
     --steel: #468284;
 }
-}
+
 * {
     box-sizing: border-box;
     padding: 0;
     border: 0;
 }
 
-.portfolio-container {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 10vw auto auto 25vw;
-    grid-template-rows: 20vh auto 20vh;
-    grid-column-gap: 1vw;
-    background-image: url("/Images/893489-cool-shapes-wallpapers-3420x2138-samsung.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1000px;
+
+body {
+    background: darkgray;
+    color: white;
+    line-height: 1.6;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25vw;
+    padding: 29px 30px 23px 30px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 60px;
+    left: -600px;           
+    opacity: 0;
+    width: 600px;
+    background-color:var(--transparent-black);
+    padding: 35px;
+}
+
+.slide .content h1 {
+    margin-bottom: 10px;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+.buttons button {
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.buttons button:hover {
+    background-color: white;
+    color: black;
+}
+
+@media(max-width: 760px) {
+    .slide .content {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
+
+    .slide.current .content {
+        transform: translateY(-300px);
+    }
+}
+
+.slide:first-child {
+    background: url('/Images/IMG_6610_Original.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(2) {
+    background: url('/Images/IMG_4578_Original.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(3) {
+    background: url('/Images/IMG_5981_Original.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(4) {
+    background: url('/Images/IMG_6724_Original.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(5) {
+    background: url('/Images/7529109584_IMG_5717_Original.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(6) {
+    background: url('/Images/IMG_9227_Original.jpg') no-repeat center top/cover;
 }
